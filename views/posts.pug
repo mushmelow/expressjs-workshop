@@ -1,0 +1,10 @@
+extends layout
+block content
+    div#posts
+        h1 List of posts
+        ul.posts-list
+            each item in data
+                li 
+                    h2
+                       a(href=item.url)= item.title
+                    p= "Created by " + item.user.username
